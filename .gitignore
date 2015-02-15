@@ -2,5 +2,5 @@
 *.swp
 .ipynb_checkpoints/
 
-playground.ipynb
-out.json
+playground*
+out*
