@@ -51,16 +51,22 @@ def scrape(url):
         d = {}
         title = article.find('h2')
         if title:
-            d.update({'title':clean(title.text)})
-        image = article.find('img')
-        if image: 
-            d.update({'image': clean(base_url + image['src'])})
+            d.update({'title': clean(title.text)})
+        images = article.findAll('img')
+        if images: 
+            d.update({'images':[clean(base_url + x['src']) for x in images]})
+        photo_read = article.find('p', attrs={'class':'photo_read'})
+        if photo_read:
+            d.update({'photo_read': clean(photo_read.text)})
+        price = article.find('section', attrs={'class':'price'})
+        if price:
+            d.update({'price': clean(price.text)})
         text = article.find('p', attrs={'class':'item1_text'})
         if text: 
-            d.update({'text':clean(text.text)})
+            d.update({'text': clean(text.text)})
         column = article.find('section', attrs={'class':'column'})
         if column: 
-            d.update({'column':clean(column.text)})
+            d.update({'column': clean(column.text)})
         da.append(d)
     data.update({'articles':da})
 

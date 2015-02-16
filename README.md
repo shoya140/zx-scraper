@@ -7,17 +7,21 @@ zx-scraper
 {
   'url': url,
   'title': title,
-  'description': rescription,
+  'description': description,
   'image': image(optional),
   'articles': [
     {
       'title': title(optional),
-      'image': image(optional),
-      'text': text,
-      'column': column
+      'text': text(optional),
+      'column': column(optional),
+      'images': [
+        image(optional),
+      ],
+      'photo_read': photo_read(optional),
+      'price': price(optional)
     },
   ],
   'tags': [
-    'tag':tag,
+    tag,
   ]
 }
