@@ -22,6 +22,6 @@ zx-scraper
     },
   ],
   'tags': [
-    tag,
+    tag(optional),
   ]
 }
