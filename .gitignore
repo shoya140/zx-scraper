@@ -3,4 +3,6 @@
 .ipynb_checkpoints/
 
 playground*
-out*
+
+data
+images
