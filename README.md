@@ -1,6 +1,8 @@
 zx-scraper
 ======================
 
+[scraping.ipynb](http://nbviewer.ipython.org/github/shoya140/zx-scraper/blob/master/scraping.ipynb)
+
 ### data structure
 
 ```
